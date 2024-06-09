@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Formulario HTML</title>
+    <script src="https://kit.fontawesome.com/6a0b2e09a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .form-row .form-group:last-child {
+            margin-right: 0;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Payment form example</h2>
+            <div class="error">Some fields are missing</div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardNumber">Card #</label>
+                        <input type="text" id="cardNumber" name="cardNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvc">CVC #</label>
+                        <input type="text" id="cvc" name="cvc">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" name="amount">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" name="state">
+                            <option value="">Pick a state</option>
+                            <!-- Add state options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Postal Code</label>
+                        <input type="text" id="postalCode" name="postalCode">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>We accept:</label>
+                    <div class="accepted-cards">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-paypal"></i>
+                        <i class="fa-brands fa-btc"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="cancel()">Cancel</button>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            function cancel() {
+                
+                alert('Cancel button clicked');
+            }
+        </script>
+
+
+    </body>
+
+</html>
